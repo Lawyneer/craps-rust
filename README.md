@@ -27,12 +27,12 @@ The player starts with a $500 bankroll and wagers $50 per round. Winnings are ad
 
 ### Prerequisites
 
-- [Rust](https://www.rust-lang.org/tools/install) (stable toolchain, includes Cargo)
+- [Rust](https://github.com/Lawyneer/craps-python) (stable toolchain, includes Cargo)
 
 ### Building and Running
 
 ```bash
-git clone https://github.com/your-username/craps.git
+git clone https://github.com/Lawyneer/craps-rust.git
 cd craps
 cargo run
 ```
