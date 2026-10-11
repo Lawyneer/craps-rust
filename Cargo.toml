@@ -2,6 +2,9 @@
 name = "craps"
 version = "0.1.0"
 edition = "2024"
+description = "A text based game of craps played in the terminal"
+license = "MIT"
+readme = "README.md"
 
 [dependencies]
 clearscreen = "5.0.0"
