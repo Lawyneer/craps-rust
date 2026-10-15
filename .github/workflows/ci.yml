@@ -61,10 +61,10 @@ jobs:
         Compress-Archive -Path "target/${{ matrix.target }}/release/craps.exe" `
           -DestinationPath "craps-${{ github.ref_name }}-${{ matrix.target }}.zip"
 
-        - name: Extract release notes from CHANGELOG
+    - name: Extract release notes from CHANGELOG
       shell: bash
       run: |
-        VERSION="${GITHUB_REF_NAME#v}"   # v1.0.0 -> 1.0.0, matching "## [1.0.0]"
+        VERSION="${GITHUB_REF_NAME#v}"
         awk -v ver="$VERSION" '
           index($0, "## [" ver "]") == 1 { found = 1; next }
           found && /^## \[/ { exit }
