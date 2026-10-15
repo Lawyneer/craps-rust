@@ -8,8 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- 1-second pause between rolls during point rounds so the user can see the
-  progression of the game
+- ASCII-art die face rendering showing both dice side-by-side after each roll
+- Interactive pause between rolls that waits for the user to press Enter
+  (replacing the fixed 1-second delay)
+- `roll_and_display()` function in `roll_die.rs` for reusable dice visualization
+  across potential future dice games
+- Fallback rendering for non-standard dice (d4, d8, d10, d20, etc.) that shows
+  the numeric value inside the die box
+
+### Changed
+- Come-out roll now also displays die faces (previously only point-phase rolls
+  showed dice)
+- Removed `sleep(Duration::...)` delay from point phase in favor of
+  user-controlled pause
 
 ### Fixed
 - Come-out roll of 11 now correctly wins. Previously only 7 was treated as a

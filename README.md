@@ -7,7 +7,7 @@ A terminal-based version of the casino dice game Craps written in Rust. This pro
 For those that don't know, Craps is a dice game played with two six-sided dice. The basic flow implemented is:
 
 1. **Come-out roll**:  The shooter rolls two dice:
-   - Rolling a **7** wins.
+   - Rolling a **7** or **11** wins.
    - Rolling a **2, 3, or 12** loses.
    - Any other total becomes the **point**.
 2. **Point phase**:  The shooter keeps rolling:
@@ -20,20 +20,21 @@ The player starts with a $500 bankroll and wagers $50 per round. Winnings are ad
 
 - Full come-out roll and point-round game logic
 - Bankroll tracking with automatic game-over on bust
+- ASCII-art dice visualization showing both dice side-by-side after each roll
 - Screen clearing between rounds for clean terminal display
-- Pause between rounds so the player can review results
+- Interactive pause that waits for user to press Enter between rolls
 
 ## Getting Started
 
 ### Prerequisites
 
-- [Rust](https://github.com/Lawyneer/craps-python) (stable toolchain, includes Cargo)
+- [Rust](https://www.rust-lang.org/tools/install) (stable toolchain, includes Cargo)
 
 ### Building and Running
 
 ```bash
 git clone https://github.com/Lawyneer/craps-rust.git
-cd craps
+cd craps-rust
 cargo run
 ```
 
@@ -45,6 +46,16 @@ src/
 ├── craps.rs     # Craps game logic (come-out roll, point rounds, payouts)
 └── roll_die.rs  # Dice-rolling utility (n dice, n sides, returns sum)
 ```
+## Visual Output Example
+
++-------+ +-------+
+| o   o | | o     |
+|   o   | |   o   |
+| o   o | |     o |
++-------+ +-------+
+
+Shooter rolled a 8
+Press Enter to keep rolling.
 
 ## Roadmap / Future Developments
 
